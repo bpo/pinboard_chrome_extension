@@ -24,7 +24,7 @@ function add_later() {
 	chrome.tabs.getSelected( null , function(tab) {
  		url = (tab.url);
  		title = (tab.title);
- 		window.open(pinboardUrl + 'later=yes&noui=yes&jump=close&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title) + ' ','Pinboard','toolbar=no,width=100,height=100');
+ 		window.open(pinboardUrl + 'later=yes&private=yes&noui=yes&jump=close&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title) + ' ','Pinboard','toolbar=no,width=100,height=100');
 	});
 }
 
