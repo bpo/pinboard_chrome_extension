@@ -1,0 +1,27 @@
+{
+   "browser_action": {
+      "default_icon": "img/pinboard16.png",
+      "default_title": "Pinboard",
+      "popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "pinboard_content_script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "pinboard_iframe_content_script.js" ],
+      "matches": [ "https://pinboard.in/add*" ]
+   } ],
+   "description": "Toolbar actions for Pinboard (http://pinboard.in)",
+   "icons": {
+      "128": "img/pinboard128.png",
+      "16": "img/pinboard16.png",
+      "32": "img/pinboard32.png",
+      "48": "img/pinboard48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7d/xA7ZiB9/Z4ug7BKzsTep+gDRsDN7cwIjjR1c4WJ01yXJ5DIFOcx5LB0yjV3pV2Ej8k4sBzy4UmIDXu72438hMl+gyV3v88bCOk7WZmygyo07cpddAYyBmqKUKjvLYUoiKtlkN8hdEC/jAQVKUpjsW+McoVa0WbI7T1ss2Y1QIDAQAB",
+   "name": "Pinboard Tools",
+   "permissions": [ "tabs", "\u003Call_urls\u003E" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}
